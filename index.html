@@ -16,6 +16,82 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+
+
+<!-- ============= CONSENT MANAGER ============= -->
+    
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" id="silktide-consent-manager-css" href="https://cdn.jsdelivr.net/gh/silktide/consent-manager@v2.0.0/silktide-consent-manager.css" integrity="sha384-IO1E/jCrQXyH5rwcI0SXP7OXw47JFqQNDQcKhbFvqnL2IunBxxwE2Ne5XyAmCqKs" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/gh/silktide/consent-manager@v2.0.0/silktide-consent-manager.js" integrity="sha384-j4NIMOecmtzMWe9GJADIIe5hTlHG63aiTQ/2XorW10RNyQJg+IU+xwFVDy45wBah" crossorigin="anonymous"></script>
+<script>
+window.silktideConsentManager.init({
+  backdrop: {
+    show: true
+  },
+  icon: {
+    position: "bottomLeft"
+  },
+  prompt: {
+    position: "bottomCenter"
+  },
+  consentTypes: [
+    {
+      id: "niezb_dne",
+      label: "Niezbędne",
+      description: "<fieldset style=\"margin: 0px 0px 32px; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor;\"><div class=\"cookie-type-content\" style=\"margin: 0px; padding: 0px; display: flex; justify-content: space-between; align-items: flex-start; gap: 24px;\"><div class=\"cookie-type-description\" style=\"margin: 0px; padding: 0px;\"><p style=\"margin-bottom: 0px; font-size: 16px; line-height: 24px; color: rgb(0, 0, 0);\">Te pliki cookie są niezbędne do prawidłowego funkcjonowania strony internetowej i nie można ich wyłączyć. Pomagają w &nbsp;logowaniu i ustawianiach preferencji prywatności.</p></div></div></fieldset><fieldset style=\"margin: 0px 0px 32px; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor;\"><br class=\"Apple-interchange-newline\"></fieldset>",
+      required: true,
+      gtag: [
+        "functionality_storage",
+        "security_storage"
+      ],
+      onAccept: function() {
+        console.log('Add logic for the required Niezbędne consent type here');
+      }
+    },
+    {
+      id: "analityczne",
+      label: "Analityczne",
+      description: "<p><span style=\"font-size: 16px; letter-spacing: normal; caret-color: rgb(37, 59, 72); color: rgb(37, 59, 72); font-family: &quot;Helvetica Neue&quot;, &quot;Segoe UI&quot;, Arial, sans-serif;\">Te pliki cookie pomagają nam ulepszać witrynę poprzez śledzenie, które strony są najbardziej popularne i jak odwiedzający poruszają się po witrynie.</span><br></p>",
+      required: false,
+      gtag: "analytics_storage"
+    },
+    {
+      id: "marketingowe",
+      label: "Marketingowe",
+      description: "<p><span style=\"font-size: 16px; letter-spacing: normal; caret-color: rgb(37, 59, 72); color: rgb(37, 59, 72); font-family: &quot;Helvetica Neue&quot;, &quot;Segoe UI&quot;, Arial, sans-serif;\">Te pliki cookie zapewniają dodatkowe funkcje i personalizację, w tym personalizację reklam. Mogą być ustawiane przez nas lub przez partnerów, z których usług korzystamy.</span><br></p>",
+      required: false,
+      gtag: [
+        "ad_storage",
+        "ad_user_data",
+        "ad_personalization",
+        "personalization_storage"
+      ]
+    }
+  ],
+  text: {
+    prompt: {
+      description: "<p><span style=\"font-size: 16px; caret-color: rgb(37, 59, 72); color: rgb(37, 59, 72); font-family: &quot;Helvetica Neue&quot;, &quot;Segoe UI&quot;, Arial, sans-serif;\">Ta strona korzysta z plików cookies</span><span style=\"font-size: 16px; caret-color: rgb(37, 59, 72); color: rgb(37, 59, 72); font-family: &quot;Helvetica Neue&quot;, &quot;Segoe UI&quot;, Arial, sans-serif;\">, które pomagają jej funkcjonować i śledzić sposób interakcji z &nbsp;nią. Dzięki temu możemy zapewnić lepszą i spersonalizowaną obsługę.</span></p>",
+      acceptAllButtonText: "Zaakceptuj wszystkie",
+      acceptAllButtonAccessibleLabel: "Zaakceptuj wszystkie pliki cookie",
+      rejectNonEssentialButtonText: "Odrzuć wszystkie",
+      rejectNonEssentialButtonAccessibleLabel: "Odrzuć wszystkie pliki cookie poza niezbędnymi",
+      preferencesButtonText: "Ustawienia",
+      preferencesButtonAccessibleLabel: "Ustaw preferencje dot. plików cookie"
+    },
+    preferences: {
+      title: "Zgoda na pliki cookie",
+      description: "<p><span style=\"font-size: 16px; letter-spacing: normal; caret-color: rgb(37, 59, 72); color: rgb(37, 59, 72); font-family: &quot;Helvetica Neue&quot;, &quot;Segoe UI&quot;, Arial, sans-serif;\">Szanujemy Twoje prawo do prywatności. Możesz nie zezwolić na niektóre rodzaje plików cookie. Twoje preferencje dotyczące plików cookie będą miały zastosowanie na całej naszej stronie internetowej.</span><br></p>",
+      saveButtonText: "Zapisz i zaknij",
+      saveButtonAccessibleLabel: "Zapisz i zamknij ustawienia",
+      creditLinkText: " ",
+      creditLinkAccessibleLabel: " "
+    }
+  }
+});
+</script>
+
+
+    
 </head>
 <body>
 
