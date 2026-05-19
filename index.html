@@ -1,412 +1,418 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Przedszkole Niepubliczne pw. Aniołów Stróżów w Warszawie">
-    <title>Przedszkole pw. Aniołów Stróżów | Warszawa-Ursynów</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Fraunces:ital,wght@0,400;0,600;0,700;1,400&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Przedszkole Niepubliczne pw. Aniołów Stróżów w Warszawie">
+<title>Przedszkole pw. Aniołów Stróżów — Warszawa-Ursynów</title>
+
+<!-- Favicon: użyte logo przedszkola; jeśli wygenerujesz .ico / .png, podmień ścieżki niżej -->
+<link rel="icon" type="image/webp" href="img/logo.webp">
+<link rel="shortcut icon" href="img/logo.webp">
+<link rel="apple-touch-icon" href="img/logo.webp">
+<meta name="theme-color" content="#3F7DB3">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<!-- Top bar -->
-<div class="top-bar">
-    <div class="container top-bar__inner">
-        <span class="top-bar__brand">Przedszkole Niepubliczne pw. Aniołów Stróżów w Warszawie</span>
-        <span class="top-bar__contact">
-            <a href="tel:+48662092250">☎ 662 092 250</a>
-            <a href="mailto:kontakt@przedszkoleaniolow.pl">✉ kontakt@przedszkoleaniolow.pl</a>
-        </span>
-    </div>
-</div>
+<!-- ============= SVG SYMBOLS ============= -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
 
-<!-- Header -->
-<header class="header" id="top">
-    <div class="container header__inner">
-        <a href="#top" class="logo">
-            <div class="logo__mark" aria-hidden="true">
-                <span class="logo__halo"></span>
-                <span class="logo__heart">♥</span>
+
+    <!-- Chevron / bullet -->
+    <symbol id="ic-chev" viewBox="0 0 24 24">
+        <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+
+
+    <!-- Phone, pin -->
+    <symbol id="ic-phone" viewBox="0 0 24 24">
+        <path d="M21 16.9V20a1 1 0 0 1-1.1 1 19 19 0 0 1-8.3-3 19 19 0 0 1-6-6A19 19 0 0 1 2.7 3.7 1 1 0 0 1 3.7 2.6h3.1a1 1 0 0 1 1 .9c.1 1 .3 2 .6 3a1 1 0 0 1-.2 1L6.9 8.9a16 16 0 0 0 6 6l1.4-1.3a1 1 0 0 1 1-.2c1 .3 2 .5 3 .6a1 1 0 0 1 .9 1z"
+              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="ic-pin" viewBox="0 0 24 24">
+        <path d="M12 22s-7-7-7-13a7 7 0 0 1 14 0c0 6-7 13-7 13z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+        <circle cx="12" cy="9" r="2.5" fill="none" stroke="currentColor" stroke-width="2"/>
+    </symbol>
+    <symbol id="ic-mail" viewBox="0 0 24 24">
+        <rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="2"/>
+        <path d="M3 7l9 7 9-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="ic-clock" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/>
+        <path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    </symbol>
+
+</defs></svg>
+
+<!-- ============= NAV ============= -->
+<nav class="nav" id="nav">
+    <div class="wrap nav-inner">
+        <a href="#top" class="brand">
+            <!--
+              MIEJSCE NA LOGO (obrazek).
+              Podmień ścieżkę src na właściwy plik, np. "zdjecia/logo.png" lub "zdjecia/logo.svg".
+              Zalecany rozmiar: kwadrat min. 200x200 px (PNG z przezroczystością lub SVG).
+            -->
+            <div class="brand-mark">
+                <img src="img/logo.webp" alt="Logo Przedszkola pw. Aniołów Stróżów"
+                     onerror="this.style.display='none';this.nextElementSibling.style.display='grid';">
+                
             </div>
-            <div class="logo__text">
-                <span class="logo__title">Aniołowie Stróżowie</span>
-                <span class="logo__sub">przedszkole katolickie · Ursynów</span>
+            <div class="brand-text">
+                <span>Przedszkole Niepubliczne pw.</span>
+                <span>Aniołów Stróżów w&nbsp;Warszawie</span>
             </div>
         </a>
-        <button class="hamburger" aria-label="Menu" aria-expanded="false">
-            <span></span><span></span><span></span>
-        </button>
-        <nav class="nav" aria-label="Główna nawigacja">
-            <ul>
-                <li><a href="#about">O przedszkolu</a></li>
-                <li><a href="#features">Co nas wyróżnia?</a></li>
-                <li><a href="#offer">Oferta</a></li>
-                <li><a href="#patron">Patron</a></li>
-                <li><a href="#opinions">Opinie</a></li>
-                <li><a href="#contact" class="nav__cta">Kontakt</a></li>
-            </ul>
-        </nav>
+        <ul class="nav-links">
+            <li><a href="#o-nas">O przedszkolu</a></li>
+            <li><a href="#wyrozniki">Co nas wyróżnia?</a></li>
+            <li><a href="#oferta">Oferta</a></li>
+            <li><a href="#dzien">Plan dnia</a></li>
+            <li><a href="#patron">Patron</a></li>
+            <li><a href="#opinie">Opinie</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+        <button class="burger" id="burger" aria-label="menu" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
-</header>
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#o-nas">O przedszkolu</a>
+        <a href="#wyrozniki">Co nas wyróżnia?</a>
+        <a href="#oferta">Oferta</a>
+        <a href="#dzien">Plan dnia</a>
+        <a href="#patron">Patron</a>
+        <a href="#opinie">Opinie</a>
+        <a href="#kontakt">Kontakt</a>
+    </div>
+</nav>
+<a id="top"></a>
 
-<!-- Hero -->
+<!-- ============= HERO ============= -->
 <section class="hero">
-    <div class="hero__clouds" aria-hidden="true">
-        <span class="cloud cloud--1"></span>
-        <span class="cloud cloud--2"></span>
-        <span class="cloud cloud--3"></span>
-    </div>
-    <div class="container hero__inner">
-        <div class="hero__text">
-            <p class="hero__eyebrow">Przedszkole Aniołów Stróżów to niepubliczne przedszkole katolickie, wychowujące dzieci w duchu wartości chrześcijańskich.</p>
-            <h1 class="hero__title">Wychowujemy <span class="hero__script">i</span> uczymy!</h1>
-            <p class="hero__lead">Domowa atmosfera, troskliwa opieka i radosna nauka — od ponad piętnastu lat na warszawskim Ursynowie.</p>
-            <div class="hero__actions">
-                <a class="btn btn--primary" href="#contact">Zapisz dziecko</a>
-                <a class="btn btn--ghost" href="#about">Poznaj nas</a>
+    <div class="wrap hero-grid">
+        <div class="hero-text">
+            <h1>Wychowujemy<br>i&nbsp;uczymy!</h1>
+            <p>Przedszkole Aniołów Stróżów jest niepublicznym przedszkolem katolickim, wychowującym dzieci w&nbsp;duchu wartości chrześcijańskich.</p>
+            <div class="hero-actions">
+                <a href="#kontakt" class="btn btn-primary">Zapisz dziecko</a>
+                <a href="#o-nas" class="btn btn-ghost">Poznaj nas</a>
             </div>
         </div>
-        <div class="hero__visual">
-            <div class="placeholder placeholder--hero" role="img" aria-label="Zdjęcie dzieci na placu zabaw">
-                <span class="placeholder__label">📷 Zdjęcie hero — dzieci w przedszkolu</span>
+        <div class="hero-photo">
+             <img src="img/dziewczynka.webp" alt="">
+        </div>
+    </div>
+</section>
+
+<!-- ============= ABOUT ============= -->
+<section class="section about" id="o-nas">
+    <div class="wrap">
+        <h2 class="section-title">O naszym przedszkolu</h2>
+        <div class="about-grid">
+            <!--
+              MIEJSCE NA LOGOTYP (większy obrazek — pełna pieczęć / logotyp przedszkola).
+              Podmień ścieżkę src na właściwy plik, np. "zdjecia/logotyp.png" lub "zdjecia/logotyp.svg".
+              Zalecany rozmiar: kwadrat min. 800x800 px (PNG z przezroczystością lub SVG).
+            -->
+            <div class="stamp-wrap">
+                <img src="img/logo-text.webp" alt="Logotyp Przedszkola pw. Aniołów Stróżów"
+                     onerror="this.style.display='none';this.nextElementSibling.style.display='grid';">
+                <div class="stamp-wrap__placeholder" aria-hidden="true">
+                    <span>★ LOGOTYP ★</span>
+                    <span>tu wstaw obrazek logo</span>
+                </div>
             </div>
-            <div class="hero__badge" aria-hidden="true">
-                <span class="hero__badge-num">15+</span>
-                <span class="hero__badge-text">lat z dziećmi</span>
+
+            <div class="about-text">
+                <p>Przedszkole działa od 2008 roku przy Parafii Błogosławionego Edmunda Bojanowskiego na warszawskim Ursynowie.</p>
+                <p>Placówka jest prowadzona przez Zgromadzenie Sióstr Służebniczek Najświętszej Maryi Panny Niepokalanie Poczętej. Każde dziecko traktujemy z&nbsp;sercem — z&nbsp;szacunkiem dla jego niepowtarzalnego rytmu rozwoju.</p>
+                <ul class="bullet-list">
+                    <li><span class="b-ico"><svg><use href="#ic-chev"/></svg></span>wychowanie w&nbsp;poszanowaniu wartości chrześcijańskich i&nbsp;patriotycznych</li>
+                    <li><span class="b-ico"><svg><use href="#ic-chev"/></svg></span>dbałość o&nbsp;kompleksowy rozwój psychiczny i&nbsp;fizyczny dziecka</li>
+                    <li><span class="b-ico"><svg><use href="#ic-chev"/></svg></span>zapewnienie domowej atmosfery pełnej życzliwości i&nbsp;miłości</li>
+                </ul>
             </div>
         </div>
     </div>
 </section>
 
-<!-- About -->
-<section class="section about" id="about">
-    <div class="container about__inner">
-        <div class="about__left">
-            <span class="eyebrow">— Nasza misja —</span>
-            <h2 class="section-title">O naszym przedszkolu</h2>
-            <p class="lead">Przedszkole działa od 2008 roku przy Parafii Błogosławionego Edmunda Bojanowskiego na warszawskim Ursynowie.</p>
-            <p>Placówka jest prowadzona przez Zgromadzenie Sióstr Służebniczek Najświętszej Maryi Panny Niepokalanie Poczętej. W codziennej pracy z dziećmi korzystamy z metod i środków wychowawczych zawartych w koncepcji pedagogicznej błogosławionego Edmunda Bojanowskiego.</p>
-            <p>Każde dziecko traktujemy jak skarb — z miłością, cierpliwością i szacunkiem dla jego niepowtarzalnego rytmu rozwoju.</p>
-        </div>
-        <div class="about__right">
-            <article class="value-card">
-                <div class="value-card__icon" aria-hidden="true">
-                    <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M24 42s-14-8.5-14-19a8 8 0 0 1 14-5.3A8 8 0 0 1 38 23c0 10.5-14 19-14 19z"/></svg>
-                </div>
-                <h3>Domowa atmosfera</h3>
-                <p>Zapewniamy domową atmosferę pełną życzliwości i miłości — dziecko czuje się jak u siebie.</p>
-            </article>
-            <article class="value-card">
-                <div class="value-card__icon" aria-hidden="true">
-                    <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="14" r="6"/><path d="M10 42c0-7.7 6.3-14 14-14s14 6.3 14 14"/></svg>
-                </div>
-                <h3>Rozwój całościowy</h3>
-                <p>Dbamy o kompleksowy rozwój psychiczny i fizyczny każdego dziecka — w jego własnym tempie.</p>
-            </article>
-            <article class="value-card">
-                <div class="value-card__icon" aria-hidden="true">
-                    <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M24 6l4.5 9.5L39 17l-7.5 7L33 34l-9-4.7L15 34l1.5-10L9 17l10.5-1.5z"/></svg>
-                </div>
-                <h3>Wartości chrześcijańskie</h3>
-                <p>Wychowanie w poszanowaniu wartości chrześcijańskich i patriotycznych — fundament na całe życie.</p>
-            </article>
-        </div>
-    </div>
-</section>
-
-<!-- Counters -->
+<!-- ============= STATS ============= -->
 <section class="stats">
-    <div class="container stats__grid">
-        <div class="stat">
-            <span class="stat__num" data-target="600">0</span>
-            <span class="stat__plus">+</span>
-            <p class="stat__label">dzieci, które uczęszczały do przedszkola</p>
-        </div>
-        <div class="stat">
-            <span class="stat__num" data-target="17">0</span>
-            <p class="stat__label">lat doświadczenia</p>
-        </div>
-        <div class="stat">
-            <span class="stat__num" data-target="120">0</span>
-            <p class="stat__label">wycieczek i wydarzeń</p>
-        </div>
-        <div class="stat">
-            <span class="stat__num" data-target="22">0</span>
-            <p class="stat__label">osób w gronie personelu</p>
-        </div>
+    <div class="wrap stats-grid">
+        <div class="stat"><span class="stat-num" data-target="600">0</span><span class="stat-plus">+</span><p>dzieci, które uczęszczały do przedszkola</p></div>
+        <div class="stat"><span class="stat-num" data-target="17">0</span><p>lat doświadczenia</p></div>
+        <div class="stat"><span class="stat-num" data-target="120">0</span><p>wycieczek i&nbsp;wydarzeń</p></div>
+        <div class="stat"><span class="stat-num" data-target="22">0</span><p>osób w&nbsp;gronie personelu</p></div>
     </div>
 </section>
 
-<!-- Features -->
-<section class="section features" id="features">
-    <div class="container">
-        <div class="section__head">
-            <span class="eyebrow">— Co wyróżnia nasze przedszkole —</span>
-            <h2 class="section-title">Pięć filarów naszej codzienności</h2>
-            <p class="section-lead">Każdy dzień w przedszkolu opieramy o pięć prostych, ale ważnych zasad. To one sprawiają, że dzieci czują się u nas bezpiecznie i z uśmiechem wracają każdego ranka.</p>
-        </div>
-        <div class="features__grid">
-            <article class="feature-card">
-                <div class="feature-card__img placeholder" aria-label="Zdjęcie: zabawa">
-                    <span class="placeholder__label">📷 Zdjęcie — Bawimy</span>
-                </div>
-                <h3>Bawimy</h3>
-                <p>Zabawa to najważniejsza praca dziecka. Tworzymy przestrzeń, w której dziecko odkrywa świat poprzez gry, klocki, role i wspólne historie.</p>
-            </article>
-            <article class="feature-card">
-                <div class="feature-card__img placeholder" aria-label="Zdjęcie: rozwój intelektualny">
-                    <span class="placeholder__label">📷 Zdjęcie — Intelekt</span>
-                </div>
-                <h3>Wspieramy rozwój intelektualny</h3>
-                <p>Czytamy, liczymy, eksperymentujemy. Wprowadzamy elementy kodowania, matematyki Gruszczyk-Kolczyńskiej i językowych zabaw po angielsku.</p>
-            </article>
-            <article class="feature-card">
-                <div class="feature-card__img placeholder" aria-label="Zdjęcie: rozwój fizyczny">
-                    <span class="placeholder__label">📷 Zdjęcie — Sport</span>
-                </div>
-                <h3>Wspieramy rozwój fizyczny</h3>
-                <p>Codzienne wyjścia na własny plac zabaw, gimnastyka, taniec i zajęcia sportowe. Ruch jest naturalną częścią naszego dnia.</p>
-            </article>
-            <article class="feature-card">
-                <div class="feature-card__img placeholder" aria-label="Zdjęcie: nauka">
-                    <span class="placeholder__label">📷 Zdjęcie — Uczymy</span>
-                </div>
-                <h3>Uczymy</h3>
-                <p>Przygotowujemy dzieci do roli ucznia — uczymy samodzielności, koncentracji i radości z pokonywania własnych „nie potrafię".</p>
-            </article>
-            <article class="feature-card">
-                <div class="feature-card__img placeholder" aria-label="Zdjęcie: wychowanie">
-                    <span class="placeholder__label">📷 Zdjęcie — Wychowujemy</span>
-                </div>
-                <h3>Wychowujemy</h3>
-                <p>Pokazujemy dzieciom świat wartości — życzliwość, prawdomówność, szacunek dla drugiego człowieka i radość z drobnych rzeczy.</p>
-            </article>
-            <article class="feature-card feature-card--accent">
-                <div class="feature-card__icon" aria-hidden="true">✦</div>
-                <h3>Modlimy się razem</h3>
-                <p>Codzienna modlitwa, krótkie katechezy i przygotowanie do uroczystości roku liturgicznego są naturalnym rytmem naszego przedszkola.</p>
-            </article>
-        </div>
-    </div>
-</section>
+<!-- ============= FEATURES ============= -->
+<section class="section features" id="wyrozniki">
+    <div class="wrap">
+        <h2 class="section-title">Co wyróżnia nasze przedszkole</h2>
+        <p class="section-lede">W&nbsp;naszej codziennej pracy z&nbsp;Państwa dziećmi korzystamy z&nbsp;metod i&nbsp;środków wychowawczych zawartych w&nbsp;koncepcji pedagogicznej błogosławionego Edmunda Bojanowskiego.</p>
 
-<!-- Offer -->
-<section class="section offer" id="offer">
-    <div class="container">
-        <div class="section__head">
-            <span class="eyebrow">— Nasza oferta —</span>
-            <h2 class="section-title">Co znajdziesz u nas każdego dnia</h2>
-            <p class="section-lead">Łączymy stałe elementy dnia z wyjątkowymi wydarzeniami i tygodniami tematycznymi. Tak, by każdy dzień miał w sobie coś nowego.</p>
+        <!--
+          MIEJSCA NA IKONY (obrazki) — podmień ścieżki src na własne pliki.
+          Zalecany rozmiar: kwadrat min. 256x256 px, PNG z przezroczystością lub SVG.
+        -->
+        <div class="features-row">
+            <div class="feature">
+                <div class="ico">
+                    <img src="img/wychowujemy.svg" alt="Ikona: Wychowujemy"
+                         onerror="this.style.display='none';this.nextElementSibling.style.display='grid';">
+                    
+                </div>
+                <h4>Wychowujemy</h4>
+                <p>W&nbsp;duchu wartości chrześcijańskich i&nbsp;patriotycznych — uczymy szacunku, odpowiedzialności i&nbsp;wdzięczności.</p>
+            </div>
+            <div class="feature">
+                <div class="ico">
+                    <img src="img/uczymy.svg" alt="Ikona: Uczymy"
+                         onerror="this.style.display='none';this.nextElementSibling.style.display='grid';">
+                    
+                </div>
+                <h4>Uczymy</h4>
+                <p>Tygodnie tematyczne, eksperymenty i&nbsp;projekty — poznajemy świat, ludzi i&nbsp;naturę przez doświadczenie.</p>
+            </div>
+            <div class="feature">
+                <div class="ico">
+                    <img src="img/bawimy.svg" alt="Ikona: Bawimy"
+                         onerror="this.style.display='none';this.nextElementSibling.style.display='grid';">
+                    
+                </div>
+                <h4>Bawimy</h4>
+                <p>Zabawa swobodna i&nbsp;kierowana — bo dziecko najlepiej uczy się przez radość, ruch i&nbsp;wspólne odkrywanie.</p>
+            </div>
         </div>
-        <div class="offer__grid">
-            <div class="offer-item">
-                <div class="offer-item__icon">📅</div>
-                <h4>Cały rok przedszkolny</h4>
-                <p>Przedszkole otwarte od września do lipca — także w czasie wakacji w wersji dyżurowej.</p>
+
+        <div class="features-row bot">
+            <div class="feature">
+                <div class="ico">
+                    <img src="img/intelektualny.svg" alt="Ikona: Wspieramy rozwój intelektualny"
+                         onerror="this.style.display='none';this.nextElementSibling.style.display='grid';">
+                    
+                </div>
+                <h4>Wspieramy rozwój<br>intelektualny</h4>
+                <p>Czytanie, matematyka, kodowanie, język angielski — w&nbsp;rytmie dostosowanym do wieku i&nbsp;ciekawości dziecka.</p>
             </div>
-            <div class="offer-item">
-                <div class="offer-item__icon">🚌</div>
-                <h4>Wycieczki</h4>
-                <p>Wycieczki jednodniowe i kilkudniowe — do teatru, muzeum, na łono natury.</p>
-            </div>
-            <div class="offer-item">
-                <div class="offer-item__icon">👶</div>
-                <h4>Małe, mieszane grupy</h4>
-                <p>Dzieci w wieku od 2,5 do 6 lat. Małe grupy mieszane sprzyjają nauce empatii i samodzielności.</p>
-            </div>
-            <div class="offer-item">
-                <div class="offer-item__icon">🎉</div>
-                <h4>Uroczystości</h4>
-                <p>Jasełka, Dzień Mamy i Taty, Dzień Babci i Dziadka, bal Wszystkich Świętych, bal karnawałowy.</p>
-            </div>
-            <div class="offer-item">
-                <div class="offer-item__icon">🍎</div>
-                <h4>Zdrowe posiłki</h4>
-                <p>Posiłki dostosowane do potrzeb żywieniowych dziecka — przygotowywane z myślą o małych podniebieniach.</p>
-            </div>
-            <div class="offer-item">
-                <div class="offer-item__icon">🎵</div>
-                <h4>Zajęcia dodatkowe</h4>
-                <p>Muzyka, logopedia, język angielski, sport, kodowanie i matematyka — w cenie czesnego.</p>
-            </div>
-            <div class="offer-item">
-                <div class="offer-item__icon">🕊</div>
-                <h4>Tygodnie tematyczne</h4>
-                <p>Szczególnie przeżywane: tydzień patriotyczny, misyjny oraz dni patrona — bł. Edmunda.</p>
-            </div>
-            <div class="offer-item">
-                <div class="offer-item__icon">🌳</div>
-                <h4>Świeże powietrze</h4>
-                <p>Codzienne spacery i pobyt na świeżym powietrzu na własnym, ogrodzonym placu zabaw.</p>
-            </div>
-            <div class="offer-item">
-                <div class="offer-item__icon">🎭</div>
-                <h4>Kultura</h4>
-                <p>Udział w przedstawieniach, warsztatach i imprezach organizowanych w przedszkolu i poza nim.</p>
+            <div class="feature">
+                <div class="ico">
+                    <img src="img/fizyczny.svg" alt="Ikona: Wspieramy rozwój fizyczny"
+                         onerror="this.style.display='none';this.nextElementSibling.style.display='grid';">
+                   
+                </div>
+                <h4>Wspieramy rozwój<br>fizyczny</h4>
+                <p>Codzienne spacery, gimnastyka, zajęcia sportowe i&nbsp;własny plac zabaw — ruch jest dla nas tak ważny jak myśl.</p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Day plan (bonus content) -->
-<section class="section dayplan">
-    <div class="container">
-        <div class="section__head">
-            <span class="eyebrow">— Plan dnia —</span>
-            <h2 class="section-title">Jak wygląda dzień w przedszkolu</h2>
+<!-- ============= OFFER ============= -->
+<section class="section offer" id="oferta">
+    <div class="deco-blue"></div>
+    <div class="deco-yellow"></div>
+    <div class="wrap">
+        <h2 class="section-title">Nasza oferta</h2>
+        <div class="offer-grid">
+            <div class="offer-photo">
+                 <img src="img/wycieczka.webp" alt="">
+            </div>
+            <ul class="bullet-list">
+                <li><span class="b-ico"><svg><use href="#ic-chev"/></svg></span>przedszkole otwarte od&nbsp;września do&nbsp;lipca</li>
+                <li><span class="b-ico"><svg><use href="#ic-chev"/></svg></span>dzieci w&nbsp;wieku od&nbsp;2,5 do&nbsp;6 lat, małe grupy mieszane</li>
+                <li><span class="b-ico"><svg><use href="#ic-chev"/></svg></span>posiłki dostosowane do&nbsp;potrzeb żywieniowych dziecka</li>
+                <li><span class="b-ico"><svg><use href="#ic-chev"/></svg></span>udział w&nbsp;wydarzeniach kulturalnych, przedstawieniach i&nbsp;imprezach organizowanych w&nbsp;przedszkolu</li>
+                <li><span class="b-ico"><svg><use href="#ic-chev"/></svg></span>zajęcia z&nbsp;muzyki, logopedyczne, język angielski, zajęcia sportowe oraz zajęcia dodatkowe (kodowanie, matematyka)</li>
+                <li><span class="b-ico"><svg><use href="#ic-chev"/></svg></span>codziennie spacery i&nbsp;pobyt na świeżym powietrzu na&nbsp;własnym placu zabaw</li>
+                <li><span class="b-ico"><svg><use href="#ic-chev"/></svg></span>szczególnie przeżywane tygodnie tematyczne: patriotyczny, misyjny, dni Edmunda</li>
+                <li><span class="b-ico"><svg><use href="#ic-chev"/></svg></span>uroczystości z&nbsp;udziałem dzieci i&nbsp;rodzin: Jasełka, Dzień Mamy i&nbsp;Taty, Dzień Babci i&nbsp;Dziadka, bal Wszystkich Świętych, bal karnawałowy</li>
+                <li><span class="b-ico"><svg><use href="#ic-chev"/></svg></span>wycieczki jednodniowe i&nbsp;kilkudniowe</li>
+            </ul>
         </div>
+    </div>
+</section>
+
+<!-- ============= DAY PLAN ============= -->
+<section class="section dayplan" id="dzien">
+    <div class="wrap">
+        <h2 class="section-title">Plan dnia</h2>
+        <p class="section-lede">Spokojny rytm dnia — przewidywalny dla dziecka, łączący naukę, zabawę, modlitwę i&nbsp;ruch na świeżym powietrzu.</p>
         <ol class="timeline">
-            <li class="timeline__item"><span class="timeline__time">7:00 – 8:30</span><h4>Schodzenie się dzieci</h4><p>Spokojny start dnia — swobodne zabawy i powitanie każdego dziecka.</p></li>
-            <li class="timeline__item"><span class="timeline__time">8:30 – 9:00</span><h4>Modlitwa i śniadanie</h4><p>Krótka modlitwa, śniadanie i poranny krąg.</p></li>
-            <li class="timeline__item"><span class="timeline__time">9:00 – 11:30</span><h4>Zajęcia tematyczne</h4><p>Edukacja, zajęcia plastyczne, język angielski, ruch i zajęcia dodatkowe.</p></li>
-            <li class="timeline__item"><span class="timeline__time">11:30 – 13:00</span><h4>Plac zabaw i obiad</h4><p>Wyjście na świeże powietrze, a po nim ciepły obiad.</p></li>
-            <li class="timeline__item"><span class="timeline__time">13:00 – 14:30</span><h4>Odpoczynek</h4><p>Bajka czytana, leżakowanie dla młodszych, ciche zabawy dla starszych.</p></li>
-            <li class="timeline__item"><span class="timeline__time">14:30 – 17:30</span><h4>Popołudnie</h4><p>Podwieczorek, zajęcia tematyczne, zabawy swobodne i rozchodzenie się dzieci.</p></li>
+            <li><span class="t-time">7:00 – 8:30</span><h4>Schodzenie się dzieci</h4><p>Spokojny start dnia, swobodne zabawy i&nbsp;powitanie każdego dziecka.</p></li>
+            <li><span class="t-time">8:30 – 9:00</span><h4>Modlitwa i&nbsp;śniadanie</h4><p>Krótka modlitwa, śniadanie i&nbsp;poranny krąg.</p></li>
+            <li><span class="t-time">9:00 – 11:30</span><h4>Zajęcia tematyczne</h4><p>Edukacja, plastyka, język angielski, ruch i&nbsp;zajęcia dodatkowe.</p></li>
+            <li><span class="t-time">11:30 – 13:00</span><h4>Plac zabaw i&nbsp;obiad</h4><p>Wyjście na świeże powietrze, a&nbsp;po nim ciepły obiad.</p></li>
+            <li><span class="t-time">13:00 – 14:30</span><h4>Odpoczynek</h4><p>Bajka czytana, leżakowanie dla młodszych, ciche zabawy dla starszych.</p></li>
+            <li><span class="t-time">14:30 – 17:30</span><h4>Popołudnie</h4><p>Podwieczorek, zajęcia tematyczne i&nbsp;rozchodzenie się dzieci.</p></li>
         </ol>
     </div>
 </section>
 
-<!-- Patron -->
-<section class="section patron" id="patron">
-    <div class="container patron__inner">
-        <div class="patron__image">
-            <div class="placeholder placeholder--portrait" aria-label="Portret Edmunda Bojanowskiego">
-                <span class="placeholder__label">📷 Portret Edmunda Bojanowskiego</span>
+<!-- ============= PATRON ============= -->
+<section class="patron" id="patron">
+    <div class="wrap">
+        <h2 class="section-title">Patron przedszkola</h2>
+        <p class="quote">Zadaniem wczesnego wychowania nie jest żadna szkolna nauka, lecz nauka życia. Słowa nauki tu nie wystarczą: dzieci nie słowem, lecz życiem uczyć trzeba, jak żyć mają.</p>
+        <div class="patron-grid">
+            <div class="patron-portrait">
+                <img src="img/edmund.webp" alt="">
+            </div>
+            <div class="patron-info">
+                <h3>Edmund Bojanowski</h3>
+                <p>herbu Junosza — polski działacz społeczny, twórca ochronek wiejskich, literat, założyciel Zgromadzenia Sióstr Służebniczek Najświętszej Marii Panny, błogosławiony Kościoła katolickiego.</p>
+                <p>Jego pedagogika oparta na miłości, prostocie i&nbsp;bliskości natury jest dla nas codzienną inspiracją.</p>
             </div>
         </div>
-        <div class="patron__text">
-            <span class="eyebrow">— Patron przedszkola —</span>
-            <h2 class="section-title">Edmund Bojanowski</h2>
-            <p class="patron__role">herbu Junosza — polski działacz społeczny, twórca ochronek wiejskich, literat, założyciel Zgromadzenia Sióstr Służebniczek Najświętszej Maryi Panny. Błogosławiony Kościoła katolickiego.</p>
-            <blockquote class="patron__quote">
-                „Zadaniem wczesnego wychowania nie jest żadna szkolna nauka, lecz nauka życia. Słowa nauki tu nie wystarczą: dzieci nie słowem, lecz życiem uczyć trzeba, jak żyć mają."
-                <cite>— bł. Edmund Bojanowski</cite>
-            </blockquote>
-            <p>Jego pedagogika oparta na miłości, prostocie i bliskości natury jest dla nas codzienną inspiracją.</p>
-        </div>
     </div>
 </section>
 
-<!-- Opinions -->
-<section class="section opinions" id="opinions">
-    <div class="container">
-        <div class="section__head">
-            <span class="eyebrow">— Opinie rodziców —</span>
-            <h2 class="section-title">Co mówią o nas rodzice</h2>
-        </div>
-        <div class="opinions__slider">
-            <button class="slider-btn slider-btn--prev" aria-label="Poprzednia opinia">‹</button>
-            <div class="opinions__track">
-                <article class="opinion is-active">
-                    <div class="opinion__avatar placeholder" aria-label="Zdjęcie rodzica"><span class="placeholder__label">👤</span></div>
-                    <p class="opinion__text">Córka chodzi do Aniołków drugi rok i każdego ranka biegnie do sali z uśmiechem. Siostry i panie z ogromnym sercem podchodzą do każdego dziecka.</p>
-                    <p class="opinion__author">Anna K. — mama Zosi</p>
-                </article>
-                <article class="opinion">
-                    <div class="opinion__avatar placeholder" aria-label="Zdjęcie rodzica"><span class="placeholder__label">👤</span></div>
-                    <p class="opinion__text">Świetna atmosfera, spokój i naprawdę zadbane wnętrza. Syn nauczył się tu samodzielności, a my czujemy, że wartości, w których go wychowujemy, są tu szanowane.</p>
-                    <p class="opinion__author">Paweł i Marta — rodzice Antosia</p>
-                </article>
-                <article class="opinion">
-                    <div class="opinion__avatar placeholder" aria-label="Zdjęcie rodzica"><span class="placeholder__label">👤</span></div>
-                    <p class="opinion__text">Polecam z całego serca. Małe grupy, indywidualne podejście i fantastyczne uroczystości — z Jasełek mamy do dziś nagranie, które oglądamy całą rodziną.</p>
-                    <p class="opinion__author">Ewa T. — mama Janka</p>
-                </article>
-                <article class="opinion">
-                    <div class="opinion__avatar placeholder" aria-label="Zdjęcie rodzica"><span class="placeholder__label">👤</span></div>
-                    <p class="opinion__text">To miejsce, do którego dziecko chce wracać. Domowa atmosfera plus solidne przygotowanie do szkoły — najlepsze co mogliśmy wybrać dla naszej Mai.</p>
-                    <p class="opinion__author">Maria P. — mama Mai</p>
-                </article>
-            </div>
-            <button class="slider-btn slider-btn--next" aria-label="Następna opinia">›</button>
-        </div>
-        <div class="opinions__dots" aria-label="Wybierz opinię"></div>
-    </div>
-</section>
-
-<!-- Contact -->
-<section class="section contact" id="contact">
-    <div class="container contact__inner">
-        <div class="contact__text">
-            <span class="eyebrow">— Kontakt —</span>
-            <h2 class="section-title">Jeśli masz pytania — napisz do nas!</h2>
-            <p>Na każdą wiadomość postaramy się odpowiedzieć najszybciej, jak to możliwe. Zapraszamy też do odwiedzenia przedszkola po wcześniejszym umówieniu wizyty.</p>
-            <ul class="contact__list">
-                <li><span class="contact__ico">☎</span><a href="tel:+48662092250">662 092 250</a></li>
-                <li><span class="contact__ico">✉</span><a href="mailto:kontakt@przedszkoleaniolow.pl">kontakt@przedszkoleaniolow.pl</a></li>
-                <li><span class="contact__ico">📍</span>ul. Nowoursynowska 143G, Warszawa</li>
-                <li><span class="contact__ico">🕗</span>poniedziałek – piątek, 7:00 – 17:30</li>
-            </ul>
-        </div>
-        <form class="contact__form" novalidate>
-            <label>
-                <span>Twój e-mail</span>
-                <input type="email" name="email" required placeholder="np. mama@example.pl">
-            </label>
-            <label>
-                <span>Imię dziecka i wiek</span>
-                <input type="text" name="child" placeholder="np. Zosia, 4 lata">
-            </label>
-            <label>
-                <span>Treść wiadomości</span>
-                <textarea name="message" rows="5" required placeholder="O co chcesz zapytać?"></textarea>
-            </label>
-            <button class="btn btn--primary" type="submit">Wyślij wiadomość →</button>
-            <p class="form-msg form-msg--ok">Formularz został wysłany — dziękujemy!</p>
-            <p class="form-msg form-msg--err">Proszę uzupełnić wymagane pola.</p>
-        </form>
-    </div>
-</section>
-
-<!-- Footer -->
-<footer class="footer">
-    <div class="container footer__grid">
-        <div class="footer__col">
-            <div class="logo logo--footer">
-                <div class="logo__mark" aria-hidden="true">
-                    <span class="logo__halo"></span>
-                    <span class="logo__heart">♥</span>
-                </div>
-                <div class="logo__text">
-                    <span class="logo__title">Aniołowie Stróżowie</span>
-                    <span class="logo__sub">przedszkole katolickie</span>
+<!-- ============= TESTIMONIALS ============= -->
+<section class="section testimonials-section" id="opinie">
+    <div class="wrap">
+        <h2 class="section-title">Opinie rodziców</h2>
+        <p class="section-lede">Najlepsze rekomendacje przychodzą od&nbsp;rodzin, które powierzyły nam swoje dzieci.</p>
+        <div class="testimonials">
+            <div class="testimonial">
+                <div class="qm">"</div>
+                <blockquote>Trafiliśmy do przedszkola Aniołów Stróżów trochę przez przypadek — dziś wiem, że to był jeden z&nbsp;najlepszych wyborów w&nbsp;naszym rodzicielstwie. Córka biegnie tu z&nbsp;uśmiechem.</blockquote>
+                <div class="who">
+                    <div class="avatar">A</div>
+                    <div><div class="name">Anna Kowalska</div><div class="role">mama Zosi (5 lat)</div></div>
                 </div>
             </div>
-            <p>Przedszkole Niepubliczne pw. Aniołów Stróżów prowadzone przez Zgromadzenie Sióstr Służebniczek NMP Niepokalanie Poczętej.</p>
-        </div>
-        <div class="footer__col">
-            <h5>Kontakt</h5>
-            <p><strong>662 092 250</strong></p>
-            <p>ul. Nowoursynowska 143G<br>02-776 Warszawa</p>
-        </div>
-        <div class="footer__col">
-            <h5>Informacje</h5>
-            <ul>
-                <li><a href="#">Statut</a></li>
-                <li><a href="#">Regulamin</a></li>
-                <li><a href="#">Polityka prywatności</a></li>
-                <li><a href="#">Rekrutacja</a></li>
-            </ul>
-        </div>
-        <div class="footer__col">
-            <h5>Znajdź nas</h5>
-            <div class="footer__socials">
-                <a href="#" aria-label="Facebook">f</a>
-                <a href="#" aria-label="Instagram">ig</a>
-                <a href="#" aria-label="YouTube">▶</a>
-                <a href="#" aria-label="E-mail">@</a>
+            <div class="testimonial">
+                <div class="qm">"</div>
+                <blockquote>Siostry mają niezwykły dar — łączą serdeczność i&nbsp;ciepło z&nbsp;naprawdę mądrą pedagogiką. Syn nauczył się tu cierpliwości i&nbsp;samodzielności.</blockquote>
+                <div class="who">
+                    <div class="avatar">E</div>
+                    <div><div class="name">Ewa Tomala</div><div class="role">mama Antka (4 lata)</div></div>
+                </div>
+            </div>
+            <div class="testimonial">
+                <div class="qm">"</div>
+                <blockquote>Małe grupy, indywidualne podejście, codzienny ruch i&nbsp;sensowny program. Po trzech latach widzimy, że to przedszkole formuje nie tylko głowę, ale i&nbsp;serce.</blockquote>
+                <div class="who">
+                    <div class="avatar">M</div>
+                    <div><div class="name">Maria Parzyszek</div><div class="role">mama bliźniaków (6 lat)</div></div>
+                </div>
             </div>
         </div>
     </div>
-    <div class="footer__bottom">
-        <div class="container">© <span id="year"></span> Przedszkole pw. Aniołów Stróżów · Wszystkie prawa zastrzeżone.</div>
+</section>
+
+<!-- ============= CONTACT ============= -->
+<section class="contact" id="kontakt">
+    <div class="wrap">
+        <div class="contact-card">
+            <div class="lines"></div>
+            <h2>Jeśli masz pytania napisz do&nbsp;nas!</h2>
+            <form class="form" id="contactForm"
+                  action="https://api.web3forms.com/submit"
+                  method="POST"
+                  novalidate>
+                <!-- Web3Forms – ustawienia ukryte -->
+                <input type="hidden" name="access_key" value="d098d522-1cea-436c-b0e9-90753d49d039">
+                <input type="hidden" name="subject" value="Nowe zapytanie z formularza – Przedszkole Aniołów Stróżów">
+                <input type="hidden" name="from_name" value="Strona przedszkola – formularz kontaktowy">
+                <!-- pole-pułapka (anti-spam, ukryte przed użytkownikiem) -->
+                <input type="checkbox" name="botcheck" style="display:none" tabindex="-1">
+
+                <div class="form-field">
+                    <input type="email" name="email" id="f-email" placeholder="twoj@email.pl" autocomplete="email">
+                    <div class="err" id="err-email"></div>
+                </div>
+                <div class="form-field">
+                    <input type="text" name="child" id="f-child" placeholder="Imię dziecka i&nbsp;wiek (opcjonalnie)">
+                </div>
+                <div class="form-field">
+                    <textarea name="msg" id="f-msg" placeholder="Treść wiadomości"></textarea>
+                    <div class="err" id="err-msg"></div>
+                </div>
+
+                <!-- Zgoda RODO (obowiązkowa) -->
+                <div class="form-consent">
+                    <label class="consent-label">
+                        <input type="checkbox" name="rodo" id="f-rodo" required>
+                        <span class="consent-text">
+                            Administratorem Państwa danych osobowych jest
+                            <strong>[Pełna nazwa przedszkola, adres, NIP]</strong>.
+                            Dane są przetwarzane w&nbsp;celu udzielenia odpowiedzi na zapytanie
+                            oraz podjęcia działań przed zawarciem umowy. Szczegółowe informacje
+                            dotyczące przetwarzania danych, w&nbsp;tym przysługujących Państwu praw,
+                            znajdą Państwo w&nbsp;naszej
+                            <a href="#" target="_blank" rel="noopener">Polityce&nbsp;Prywatności</a>.
+                        </span>
+                    </label>
+                    <div class="err" id="err-rodo"></div>
+                </div>
+
+                <div style="display:flex;justify-content:center">
+                    <button type="submit" class="submit-btn" id="submitBtn">Wyślij&nbsp;→</button>
+                </div>
+                <div id="formStatus"></div>
+                <p class="form-note">Na każdy mail postaramy się odpowiedzieć najszybciej jak to możliwe.</p>
+            </form>
+        </div>
+    </div>
+
+    <div class="gallery-wrap">
+        <button class="gallery-nav gallery-nav--prev" type="button" aria-label="Przewiń w lewo">‹</button>
+        <div class="gallery" id="gallery">
+            <!-- Kafelki są generowane przez script.js (29 zdjęć: img/01.jpg – img/29.jpg) -->
+        </div>
+        <button class="gallery-nav gallery-nav--next" type="button" aria-label="Przewiń w prawo">›</button>
+    </div>
+</section>
+
+<!-- ============= LIGHTBOX MODAL ============= -->
+<div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Powiększone zdjęcie">
+    <button class="lightbox__close" type="button" aria-label="Zamknij">×</button>
+    <button class="lightbox__nav lightbox__nav--prev" type="button" aria-label="Poprzednie zdjęcie">‹</button>
+    <div class="lightbox__stage">
+        <img class="lightbox__img" id="lightboxImg" src="" alt="">
+        <div class="lightbox__counter" id="lightboxCounter">1 / 29</div>
+    </div>
+    <button class="lightbox__nav lightbox__nav--next" type="button" aria-label="Następne zdjęcie">›</button>
+</div>
+
+<!-- ============= FOOTER ============= -->
+<footer>
+    <div class="wrap footer-inner">
+        <div class="footer-contacts">
+            <a class="item" href="tel:+48662092250"><svg><use href="#ic-phone"/></svg>662 092 250</a>
+            <a class="item" href="mailto:kontakt@przedszkoleaniolow.pl"><svg><use href="#ic-mail"/></svg>kontakt@przedszkoleaniolow.pl</a>
+            <div class="item"><svg><use href="#ic-pin"/></svg>ul. Nowoursynowska 143G</div>
+            <div class="item"><svg><use href="#ic-clock"/></svg>pn–pt · 7:00 – 17:30</div>
+        </div>
+        <div class="footer-links">
+            <a href="#">Statut</a>
+            <a href="#">Regulamin</a>
+            <a href="#">Polityka prywatności</a>
+        </div>
+    </div>
+    <div class="footer-copy">
+        <div class="wrap">© <span id="year"></span> Przedszkole pw.&nbsp;Aniołów Stróżów · Wszystkie prawa zastrzeżone.</div>
     </div>
 </footer>
 
 <a href="#top" class="to-top" aria-label="Wróć na górę">↑</a>
+
+<!-- ============= MODAL POWITALNY (zapisy) ============= -->
+<div class="welcome-modal" id="welcomeModal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Zapisy do przedszkola">
+    <div class="welcome-modal__backdrop" data-close="1"></div>
+    <div class="welcome-modal__box">
+        <button class="welcome-modal__close" type="button" aria-label="Zamknij" data-close="1">×</button>
+        <img class="welcome-modal__img" src="img/zapisy.webp" alt="Zapisy do przedszkola Aniołów Stróżów"
+             onerror="this.style.display='none';">
+        <a class="welcome-modal__cta" href="#kontakt" data-close="1">Skontaktuj się z nami →</a>
+    </div>
+</div>
 
 <script src="script.js"></script>
 </body>
