@@ -1181,10 +1181,7 @@ footer {
     opacity: 1;
     transform: none;
 }
-#stcm-backdrop {
-  position: fixed !important;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
+#stcm-modal footer {
+  background-color: var(--backgroundColor) !important;
+  background: transparent !important;
 }
