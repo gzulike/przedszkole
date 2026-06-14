@@ -246,7 +246,7 @@
     if (form && status) {
         // Adres odbiorcy – używany tylko w fallbacku mailto:
         // (wysyłka przez Web3Forms; access_key jest w hidden inpucie w HTML)
-        const RECIPIENT = 'grzegorz.zuromski@gmail.com';
+        const RECIPIENT = 'ursynow-sluzebniczki@o2.pl';
         const WEB3FORMS_ENDPOINT = 'https://api.web3forms.com/submit';
 
         form.addEventListener('submit', async (e) => {

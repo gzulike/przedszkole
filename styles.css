@@ -670,6 +670,23 @@ ul, ol { padding: 0; margin: 0; list-style: none; }
     max-width: 1100px;
     margin: 0 auto;
 }
+/* Wersja tabletowa — mniejsze marginesy boczne */
+@media (max-width: 880px) {
+    .contact-card { padding: 56px 32px 64px; border-radius: 28px; }
+}
+/* Wersja mobilna — minimalne paddingi, żeby inputy/tekst dostały całą szerokość */
+@media (max-width: 600px) {
+    .contact-card { padding: 40px 16px 48px; border-radius: 22px; }
+    .contact-card h2 { margin-bottom: 28px; font-size: clamp(24px, 6vw, 32px); }
+    .form-field input,
+    .form-field textarea { padding: 16px 18px; font-size: 15.5px; }
+    .form-consent { margin: 4px 0 14px; }
+    .consent-label { gap: 10px; }
+    .consent-text { font-size: 13px; line-height: 1.55; }
+    .form-consent .err { padding-left: 32px; }
+    .form-note { margin-top: 22px; font-size: 13.5px; }
+    .submit-btn { width: 100%; }
+}
 .contact-card .lines { display: none; }
 .contact-card > * { position: relative; }
 .contact-card h2 {
@@ -814,8 +831,10 @@ ul, ol { padding: 0; margin: 0; list-style: none; }
 /* ===== GALLERY — pozioma karuzela ===== */
 .gallery-wrap {
     position: relative;
-    margin-top: 60px;
+    margin: 60px auto 0;
     background: var(--paper);
+    /* Trzyma karuzelę w tej samej kolumnie co .contact-card powyżej (max-width: 1100px) */
+    max-width: 1100px;
     padding: 0;
 }
 .gallery {
@@ -1180,8 +1199,4 @@ footer {
 .fade.in {
     opacity: 1;
     transform: none;
-}
-#stcm-modal footer {
-  background-color: var(--backgroundColor) !important;
-  background: transparent !important;
 }
